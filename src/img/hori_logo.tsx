@@ -1,8 +1,8 @@
 export default function HorizontalLogo() {
   return (
     <svg
-      width="auto"
-      height="25"
+      width="80"
+      height="30"
       viewBox="0 0 260 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

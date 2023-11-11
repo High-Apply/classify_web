@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+div,
+h1 {
+  word-break: keep-all;
+  white-space: pre-wrap;
+}

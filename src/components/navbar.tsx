@@ -1,13 +1,14 @@
 import HorizontalLogo from "@/img/hori_logo";
+import Link from "next/link";
 import Navitem from "./navitem";
 
 export default function Navbar() {
   return (
-    <nav className="max-w-7xl fixed z-50 w-full bg-white left-0 h-15 flex items-center">
-      <div className="w-[84%] flex flex-row my-0 mx-auto">
-        <div className="flex items-center mr-6 h-15">
+    <nav className="max-w-8xl fixed z-50 w-full bg-white left-0 h-15 flex items-center m-auto">
+      <div className="w-[88%] flex flex-row my-0 mx-auto h-full">
+        <Link href="/" className="flex items-center mr-6 h-15">
           <HorizontalLogo />
-        </div>
+        </Link>
         <div className="flex flex-1 max-h-full justify-between">
           <ul className="flex items-center p-0 m-0"></ul>
           <ul className="flex items-center p-0 m-0">
