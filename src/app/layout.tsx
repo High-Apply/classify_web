@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import { nanumGothic } from "@/fonts/font";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={nanumGothic.className}>{children}</body>
+      <body className={nanumGothic.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
