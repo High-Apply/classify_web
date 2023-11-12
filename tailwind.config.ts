@@ -11,6 +11,13 @@ const config: Config = {
       height: {
         "15": "60px",
       },
+      colors: {
+        darkGreen: "#01744D",
+      },
+      transitionProperty: {
+        height: "height",
+        backgroundColor: "backgroundColor",
+      },
     },
     fontSize: {
       t1: [
@@ -33,6 +40,7 @@ const config: Config = {
       b1: ["20px", "20px"],
       b2: ["18px", "18px"],
       b3: ["13px", "13px"],
+      b4: ["11px", "11px"],
     },
   },
   plugins: [],
