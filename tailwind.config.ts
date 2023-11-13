@@ -7,6 +7,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      height: {
+        "15": "60px",
+      },
+      colors: {
+        darkGreen: "#01744D",
+      },
+      transitionProperty: {
+        height: "height",
+        backgroundColor: "backgroundColor",
+      },
+    },
     fontSize: {
       t1: [
         "57px",
@@ -27,7 +39,8 @@ const config: Config = {
       h4: ["24px", "24px"],
       b1: ["20px", "20px"],
       b2: ["18px", "18px"],
-      b3: ["15px", "15px"],
+      b3: ["13px", "13px"],
+      b4: ["11px", "11px"],
     },
   },
   plugins: [],
