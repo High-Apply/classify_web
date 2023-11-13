@@ -7,7 +7,7 @@ type NavItemType = {
   isMobile?: boolean;
 };
 
-export default function Navitem({
+export default function NavLink({
   itemName,
   where,
   disabled,
