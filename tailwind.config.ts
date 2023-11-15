@@ -13,6 +13,7 @@ const config: Config = {
       },
       colors: {
         darkGreen: "#01744D",
+        lightGreen: "#4BA97E",
       },
       transitionProperty: {
         height: "height",

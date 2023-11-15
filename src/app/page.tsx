@@ -1,31 +1,144 @@
+"use client";
+import { StoreDownloadButton } from "@/components/CustomButtons";
+import useIsMobile from "@/hooks/useMediaQuery";
 import Image from "next/image";
 
 export default function Home() {
+  const isMobile = useIsMobile();
   return (
-    <main>
-      <section className="relative w-full overflow-hidden">
-        <div className="w-auto h-screen relative">
+    <main className="pt-32 md:pt-48">
+      <section className="pr-0 h-[560px] flex flex-col md:flex-row justify-start max-w-[1440px] md:pl-28 pl-0">
+        {isMobile ? (
+          <div className="md:w-1/2 w-[92%] flex flex-col my-0 mx-auto">
+            <h3 className="md:text-h4 text-b2 font-bold text-lightGreen mb-3">
+              나만의 스마트한 브라우저
+            </h3>
+            <h1 className="md:text-t2 text-h2 leading-normal font-bold max-w-[600px] mb-5">
+              클래시파이로 일상을 바꿔보세요.
+            </h1>
+            <p className="md:text-b2 text-b3 leading-normal">
+              더 가볍게, 더 편하게, 내 일상에 딱 맞는 브라우저가 여기 있습니다.
+              새로운 인터넷으로 하루를 열어 보세요. 작지만 큰 변화가 시작됩니다.
+            </p>
+            <div className="text-center flex flex-row items-start md:mt-10 mt-6 w-full">
+              <StoreDownloadButton downloadLink="https://classify.kr">
+                <Image
+                  src="/img/applekorea.png"
+                  width={24}
+                  height={24}
+                  alt="애플코리아 로고"
+                />
+                App Store
+              </StoreDownloadButton>
+              <StoreDownloadButton downloadLink="https://classify.kr">
+                <Image
+                  src="/img/googleplay.png"
+                  width={24}
+                  height={24}
+                  alt="구글 플레이 로고"
+                />
+                Google Play
+              </StoreDownloadButton>
+            </div>
+          </div>
+        ) : (
+          <div className="md:w-1/2 w-full flex flex-col pr-10">
+            <h3 className="text-h4 font-bold text-lightGreen mb-3">
+              나만의 스마트한 브라우저
+            </h3>
+            <h1 className="text-t2 font-bold max-w-[600px] mb-6">
+              클래시파이로 일상을 바꿔보세요.
+            </h1>
+            <p className="text-b2 leading-normal">
+              더 가볍게, 더 편하게, 내 일상에 딱 맞는 브라우저가 여기 있습니다.
+              새로운 인터넷으로 하루를 열어 보세요. 작지만 큰 변화가 시작됩니다.
+            </p>
+            <div className="text-center flex flex-row items-start mt-10 w-full">
+              <StoreDownloadButton downloadLink="https://classify.kr">
+                <Image
+                  src="/img/applekorea.png"
+                  width={24}
+                  height={24}
+                  alt="애플코리아 로고"
+                />
+                App Store
+              </StoreDownloadButton>
+              <StoreDownloadButton downloadLink="https://classify.kr">
+                <Image
+                  src="/img/googleplay.png"
+                  width={24}
+                  height={24}
+                  alt="구글 플레이 로고"
+                />
+                Google Play
+              </StoreDownloadButton>
+            </div>
+          </div>
+        )}
+        <div className="flex items-start justify-center md:w-1/2 w-full relative mt-10">
           <Image
-            src="/img/new_main.png"
-            alt="new main"
-            fill
-            className="object-cover w-full h-full"
+            src="/img/hyu_character.png"
+            alt="임시 이미지"
+            width={360}
+            height={360}
           />
         </div>
-        <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-white to-[rgba(255,255,255,0)]"></div>
-        <div className="absolute top-0 left-0 w-full h-full flex items-center flex-col justify-between">
-          <div className="mt-44 flex items-center flex-col justify-start">
-            <h1 className="text-t1 text-center w-full mb-12">
-              금융의 모든 것 토스에서 쉽게 간편하게
+      </section>
+      <section className="pr-0 h-[560px] flex flex-col md:flex-row justify-start max-w-[1440px] md:pl-28 pl-0">
+        {isMobile ? (
+          <div className="md:w-1/2 w-[92%] flex flex-col my-0 mx-auto">
+            <h3 className="md:text-h4 text-b2 font-bold text-lightGreen mb-3">
+              나만의 스마트한 브라우저
+            </h3>
+            <h1 className="md:text-t2 text-h2 leading-normal font-bold max-w-[600px] mb-5">
+              클래시파이로 일상을 바꿔보세요.
             </h1>
+            <p className="md:text-b2 text-b3 leading-normal">
+              더 가볍게, 더 편하게, 내 일상에 딱 맞는 브라우저가 여기 있습니다.
+              새로운 인터넷으로 하루를 열어 보세요. 작지만 큰 변화가 시작됩니다.
+            </p>
           </div>
-        </div>
-        <div className="relative flex justify-start flex-col py-52 px-0 bg-[#f9fafb]">
-          <p className="text-h3 font-bold text-center mb-14 leading-10">
-            내 모든 금융 내역을 한눈에 조회하고 한 곳에서 관리하세요. 이제껏
-            경험 못 했던 쉽고 편리한 금융 서비스, 토스와 함께라면 당신의 일상이
-            새로워질 거예요.
-          </p>
+        ) : (
+          <div className="md:w-1/2 w-full flex flex-col pr-10">
+            <h3 className="text-h4 font-bold text-lightGreen mb-3">
+              나만의 스마트한 브라우저
+            </h3>
+            <h1 className="text-t2 font-bold max-w-[600px] mb-6">
+              클래시파이로 일상을 바꿔보세요.
+            </h1>
+            <p className="text-b2 leading-normal">
+              더 가볍게, 더 편하게, 내 일상에 딱 맞는 브라우저가 여기 있습니다.
+              새로운 인터넷으로 하루를 열어 보세요. 작지만 큰 변화가 시작됩니다.
+            </p>
+            <div className="text-center flex flex-row items-start mt-10 w-full">
+              <StoreDownloadButton downloadLink="https://classify.kr">
+                <Image
+                  src="/img/applekorea.png"
+                  width={24}
+                  height={24}
+                  alt="애플코리아 로고"
+                />
+                App Store
+              </StoreDownloadButton>
+              <StoreDownloadButton downloadLink="https://classify.kr">
+                <Image
+                  src="/img/googleplay.png"
+                  width={24}
+                  height={24}
+                  alt="구글 플레이 로고"
+                />
+                Google Play
+              </StoreDownloadButton>
+            </div>
+          </div>
+        )}
+        <div className="flex items-start justify-center md:w-1/2 w-full relative mt-10">
+          <Image
+            src="/img/hyu_character.png"
+            alt="임시 이미지"
+            width={400}
+            height={400}
+          />
         </div>
       </section>
     </main>
