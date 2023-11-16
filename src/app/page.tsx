@@ -1,8 +1,8 @@
 "use client";
 import { StoreDownloadButton } from "@/components/CustomButtons";
 import useIsMobile from "@/hooks/useMediaQuery";
+import { motion } from "framer-motion";
 import Image from "next/image";
-
 export default function Home() {
   const isMobile = useIsMobile();
   return (
@@ -76,12 +76,24 @@ export default function Home() {
           </div>
         )}
         <div className="flex items-start justify-center md:w-1/2 w-full relative mt-10">
-          <Image
-            src="/img/hyu_character.png"
-            alt="임시 이미지"
-            width={360}
-            height={360}
-          />
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 200,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image
+              src="/img/rocket.jpg"
+              width={300}
+              height={300}
+              alt="BLOWING ROCKET"
+            />
+          </motion.div>
         </div>
       </section>
       <section className="pr-0 h-[560px] flex flex-col md:flex-row justify-start max-w-[1440px] md:pl-28 pl-0">
@@ -133,11 +145,18 @@ export default function Home() {
           </div>
         )}
         <div className="flex items-start justify-center md:w-1/2 w-full relative mt-10">
-          <Image
-            src="/img/hyu_character.png"
-            alt="임시 이미지"
-            width={400}
-            height={400}
+          <motion.div
+            className="w-52 h-52 rounded-full bg-darkGreen"
+            animate={{
+              scale: [1, 1.5, 1.5, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "20%", "50%"],
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              times: [0, 0.2, 0.5, 0.8, 1],
+            }}
           />
         </div>
       </section>
