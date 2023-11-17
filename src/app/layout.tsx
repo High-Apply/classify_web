@@ -1,9 +1,13 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/nav/navbar";
 import { nanumGothic } from "@/fonts/font";
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://classify.kr"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Classify",
     description: "Next Education with Next Application",
@@ -28,7 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className="scroll-smooth">
+      <head>
+        <title>Classify</title>
+      </head>
       <body className={nanumGothic.className}>
         <Navbar />
         {children}
