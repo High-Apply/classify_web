@@ -1,5 +1,6 @@
 "use client";
 import { StoreDownloadButton } from "@/components/CustomButtons";
+import InputForm from "@/components/main/input-form";
 import useIsMobile from "@/hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -100,10 +101,8 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-        <section
-          id="team"
-          className="pr-0 h-[560px] flex flex-col md:flex-row justify-start max-w-[1440px] md:pl-28 pl-0"
-        >
+        <div id="team"></div>
+        <section className="pr-0 h-[560px] flex flex-col md:flex-row justify-start max-w-[1440px] md:pl-28 pl-0">
           {isMobile ? (
             <div className="md:w-1/2 w-[92%] flex flex-col my-0 mx-auto">
               <h3 className="md:text-h4 text-b2 font-bold text-lightGreen mb-3">
@@ -168,6 +167,12 @@ export default function Home() {
               }}
             />
           </div>
+        </section>
+        <section
+          id="sales"
+          className="pr-0 h-[560px] flex flex-col md:flex-row justify-start max-w-[1440px]"
+        >
+          <InputForm />
         </section>
       </main>
     </>
