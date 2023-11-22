@@ -14,10 +14,17 @@ const config: Config = {
       colors: {
         darkGreen: "#01744D",
         lightGreen: "#4BA97E",
+        midNight: "#4A5CA9",
       },
       transitionProperty: {
         height: "height",
         backgroundColor: "backgroundColor",
+      },
+      backgroundImage: {
+        "teamspace-img": "url('/img/students.jpg')",
+      },
+      animation: {
+        "bounce-slow": "bounce 2s linear infinite",
       },
     },
     fontSize: {
@@ -39,7 +46,7 @@ const config: Config = {
       h3: ["28px", "28px"],
       h4: ["24px", "24px"],
       b1: ["20px", "20px"],
-      b2: ["18px", "18px"],
+      b2: ["16px", "16px"],
       b3: ["13px", "13px"],
       b4: ["11px", "11px"],
     },

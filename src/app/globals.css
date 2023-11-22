@@ -7,3 +7,11 @@ h1 {
   word-break: keep-all;
   white-space: pre-wrap;
 }
+
+input:focus,
+select:focus,
+option:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

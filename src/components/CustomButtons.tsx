@@ -16,7 +16,7 @@ function StoreDownloadButton({
   return (
     <a
       href={downloadLink}
-      className="py-3 px-5 text-white text-b2 bg-black mr-1 rounded-lg font-bold flex-row items-center gap-2 relative inline-flex justify-center m-0"
+      className="py-3 px-5 text-white text-b2 bg-black mr-1 rounded-lg font-bold flex-row items-center gap-2 relative inline-flex justify-center m-0 hover:bg-opacity-80 transition-all"
     >
       {children}
     </a>
