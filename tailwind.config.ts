@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         darkGreen: "#01744D",
         lightGreen: "#4BA97E",
+        midNight: "#4A5CA9",
       },
       transitionProperty: {
         height: "height",

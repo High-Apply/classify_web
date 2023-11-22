@@ -4,8 +4,8 @@ export default function InputForm() {
   const [popup, setPopup] = useState(false);
   return (
     <div className="flex md:flex-1 md:flex-row items-center justify-center flex-col w-full">
-      <div className="w-44"></div>
-      <div className="md:w-1/2 w-[95%] flex flex-col gap-4 mb-8 md:mb-0">
+      <div className="md:w-28 w-0"></div>
+      <div className="md:w-1/2 w-[95%] flex flex-col items-start justify-start gap-4 mb-8 md:mb-0">
         <h2 className="md:text-t2 text-h3 font-bold text-left mb-9">
           Contact Us
         </h2>
@@ -29,31 +29,38 @@ export default function InputForm() {
           <CustomInput
             id="school"
             labelName="학교(기업)명"
-            placeholder="갈매고등학교"
+            placeholder="한양고등학교"
             required
             type={inputType.text}
           />
           <CustomInput
             id="responsibility"
-            labelName="대표자 및 담당자명"
-            placeholder="표준성"
+            labelName="담당자명"
+            placeholder="교육과정 관련 담당자"
             required
             type={inputType.text}
           />
+          <CustomInput
+            id="phone"
+            labelName="휴대전화"
+            placeholder="010-1234-5678"
+            required
+            type={inputType.phone}
+          />
+          <CustomInput
+            id="email"
+            labelName="이메일"
+            placeholder="john@gmail.com"
+            required
+            type={inputType.email}
+          />
         </div>
         <CustomInput
-          id="phone"
-          labelName="휴대전화"
-          placeholder="010-1234-5678"
+          id="request"
+          labelName="문의 내용"
+          placeholder="문의할 내용을 선택해주세요."
           required
-          type={inputType.phone}
-        />
-        <CustomInput
-          id="email"
-          labelName="이메일"
-          placeholder="john@gmail.com"
-          required
-          type={inputType.email}
+          type={inputType.text}
         />
         <div className="flex items-start mb-6">
           <div className="flex flex-row items-center h-5">

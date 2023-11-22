@@ -25,11 +25,11 @@ export default function Navbar() {
   return (
     <header
       className={
-        "max-w-8xl fixed z-50 w-full left-0 md:h-15 h-auto flex items-center m-auto " +
-        (scrollY === 0 ? "bg-transparent" : "bg-white shadow-md")
+        "max-w-8xl fixed z-50 w-full left-0 md:h-15 h-auto flex items-center m-auto" +
+        (scrollY === 0 ? "bg-transparent" : "shadow-md bg-white")
       }
     >
-      <nav className="w-[82%] flex flex-col md:flex-row my-0 mx-auto h-full">
+      <nav className="w-[92%] flex flex-col md:flex-row my-0 mx-auto h-full">
         <Link to="top" className="flex items-center mr-6 h-15 cursor-pointer">
           <HorizontalLogo />
         </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
           </div>
         )}
         {navOpen && isMobile && (
-          <div className="flex flex-1 max-h-full justify-between my-0 -mx-6 flex-col w-screen">
+          <div className="flex flex-1 max-h-full justify-between my-0 -mx-6 flex-col w-screen bg-white">
             <ul className="flex flex-col items-center p-0 m-0"></ul>
             <ul
               className="flex flex-col p-0 m-0"

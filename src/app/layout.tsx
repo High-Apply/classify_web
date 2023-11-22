@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="scroll-smooth">
       <head>
-        <title>Classify</title>
+        <title>클래시파이</title>
       </head>
       <body className={nanumGothic.className}>
         <Navbar />
