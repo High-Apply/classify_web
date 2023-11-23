@@ -1,7 +1,7 @@
 "use client";
 import useIsMobile from "@/hooks/useMediaQuery";
-import Hamburger from "@/img/hamburger";
-import HorizontalLogo from "@/img/hori_logo";
+import Hamburger from "@/svg/hamburger";
+import HorizontalLogo from "@/svg/hori_logo";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import NavLink from "./navLink";

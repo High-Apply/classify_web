@@ -23,8 +23,32 @@ const config: Config = {
       backgroundImage: {
         "teamspace-img": "url('/img/students.jpg')",
       },
+      keyframes: {
+        dropdown: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-5%)",
+          },
+          "100%": {
+            opacity: "100%",
+            transform: "translateY(0%)",
+          },
+        },
+        "dropdown-close": {
+          "0%": {
+            opacity: "100%",
+            transform: "translateY(0)",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(-5%)",
+          },
+        },
+      },
       animation: {
         "bounce-slow": "bounce 2s linear infinite",
+        dropdown: "dropdown 0.5s ease-in-out forwards",
+        "dropdown-close": "dropdown-close 0.2s ease-in-out forwards",
       },
     },
     fontSize: {
